@@ -2,6 +2,7 @@ body,
 html {
     height: 90vh;
     margin: auto;
+
 }
 
 body {
@@ -27,9 +28,18 @@ main {
     background-color: white;
     text-align: center;
     padding: 0px 20rem 0rem 13rem;
-
-
+    overflow: hidden;
+    overflow-y: scroll;
 }
+::-webkit-scrollbar{
+    width: 12px;
+}
+::-webkit-scrollbar-thumb{
+    background: red;
+    border-radius: 6px;
+}
+
+
 
 footer {
     grid-area: footer;
@@ -47,6 +57,7 @@ footer {
     
 }
 
+
 header {
     grid-area: header;
     background-color: white;
@@ -61,11 +72,13 @@ icon {
     width: 80px;
     height: 107px;
 }
-
-.navigation{
-    position: ;
-    z-index: ;
+.simplebar-scrollbar:before{
+    background: linear-gradient(black 20%, white);
 }
+
+
+
+
 @media all and (min-width:790px){
     .navigation{
      display: none;
@@ -73,6 +86,12 @@ icon {
 
 }
 
+@media (min-width:774.4px) and (max-width:1250px){
+    main{
+        padding: 5%;
+    }
+
+}
 
 @media all and (max-width: 790px) {
     
@@ -95,13 +114,18 @@ icon {
     main {
         grid-area: main;
         background-color: white;
-        padding: 0;
+        padding: 5%;
     }
 
     footer {
         grid-area: footer;
         width: 100%;
 
+    }
+
+    h1{
+        font-size: 48px;
+        font-weight: 600;
     }
 
     header {
@@ -128,7 +152,10 @@ icon {
     }
 
     .mmu{
-        width: 15%;
-        margin-left: 22px;
-        position: static;
+        position: absolute;
+        z-index: 1;
+        margin-top: 0;
+        transform: translateY(-50%);
+        width: 7%;
     }
+}
