@@ -1,0 +1,17 @@
+body{
+    background-color: rgb(56, 56, 56);
+}
+
+.heading{
+    text-align: center;
+    color: floralwhite;
+}
+
+.subheading{
+    text-align: center;
+    color: ghostwhite;
+}
+
+.table{
+    padding: 4em;
+}

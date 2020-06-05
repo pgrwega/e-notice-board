@@ -1,0 +1,134 @@
+body,
+html {
+    height: 90vh;
+    margin: auto;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 8% auto auto 8%;
+    grid-template-rows: 15% 85% 15%;
+    grid-template-areas:
+        "sidebar header header icon"
+        "sidebar main main main"
+        "footer footer footer footer"
+}
+
+aside {
+    background-image: linear-gradient(black 20%, white);
+    grid-area: sidebar;
+}
+
+
+main {
+    grid-area: main;
+    background-color: white;
+    text-align: center;
+    padding: 0px 20rem 0rem 13rem;
+
+
+}
+
+footer {
+    grid-area: footer;
+   text-align: center;
+}
+.foot-text{
+    margin-top: 5rem;
+}
+.streak{
+    left: 0;
+    right: 0;
+    position: absolute;
+    background-size: cover;
+    width: 100%;
+    
+}
+
+header {
+    grid-area: header;
+    background-color: white;
+    text-align: center;
+    margin-top: 39px;
+}
+
+icon {
+    grid-area: icon;
+    background: url('MMU.png');
+    background-size: cover;
+    width: 80px;
+    height: 107px;
+}
+
+.navigation{
+    position: ;
+    z-index: ;
+}
+@media all and (min-width:790px){
+    .navigation{
+     display: none;
+    }
+
+}
+
+
+@media all and (max-width: 790px) {
+    
+    
+    
+    body {
+       
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        display: grid;
+        grid-template-columns: 100% auto auto;
+        grid-template-rows: 10% 15% auto 15%;
+        grid-template-areas:
+            "nav nav nav"
+            "header header header"
+            "main main main"
+            "footer footer footer"
+    }
+
+    main {
+        grid-area: main;
+        background-color: white;
+        padding: 0;
+    }
+
+    footer {
+        grid-area: footer;
+        width: 100%;
+
+    }
+
+    header {
+        grid-area: header;
+        margin-top: 0;
+    }
+
+    aside {
+        display: none;
+    }
+
+    icon {
+        display: none;
+    }
+
+    body, html {
+        height: 105vh;
+        
+    }
+
+    nav{
+        grid-area: nav;
+        background-color: lightgray;
+    }
+
+    .mmu{
+        width: 15%;
+        margin-left: 22px;
+        position: static;
+    }
