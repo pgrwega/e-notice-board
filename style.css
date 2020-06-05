@@ -1,38 +1,45 @@
-body{
-   background-color: rgb(37, 37, 37);
+body {
+    background-color: rgb(37, 37, 37);
     align-content: center;
-   
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+
 }
-.mmu{
+
+.mmu {
     width: 15%;
     margin-left: 22px;
 }
-h1{
+
+h1 {
     text-align: center;
     color: #fff;
+    font-weight: 900;
 }
-.container-fluid{
+
+.container-fluid {
 
     padding: 1rem 0 0;
-  margin: none;
-  width: 95%;
-  text-align: center;
+    margin: none;
+    width: 95%;
+    text-align: center;
 }
 
-.grid-gap{
+.grid-gap {
     padding: 0 0.5px 0;
     border-radius: 2rem;
-  height: 30vh;
-  transition: 0.3s;
-  
-    
+    height: 30vh;
+    transition: 0.3s;
+
+
 }
-.grid-gap:hover{
+
+.grid-gap:hover {
     box-shadow: 0 8px 16px 0 rgba(155, 143, 143, 0.377);
     transform: scale(1.013);
 }
 
-.backgroundimage{
+.backgroundimage {
     left: 0;
     right: 0;
     position: fixed;
@@ -42,17 +49,57 @@ h1{
     z-index: -1;
     -webkit-filter: blur(2px);
 }
-.streak{
+
+.streak {
     left: 0;
     right: 0;
     position: absolute;
     background-size: cover;
     width: 100%;
-    
+
     z-index: 1;
-   
+
 }
 
-.quote{
+.quote {
     color: #fff;
+}
+
+
+
+@keyframes yourAnimation {
+    0% {
+        transform: rotate(xx) translateX(150px);
+        opacity: 0;
+    }
+
+    25% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    80% {
+        transform: translateX(25px);
+    }
+
+    100% {
+        transform: rotate(xx) translateX(0px);
+        opacity: 1;
+    }
+}
+
+.mmu {
+    animation: yourAnimation 0.5s forwards 0s linear;
+}
+
+
+@media all and (max-width: 750.60px){
+
+    .mmu{
+        position: absolute;
+        z-index: 1;
+        margin-top: 0;
+        transform: translateY(-50%);
+    }
+
 }
